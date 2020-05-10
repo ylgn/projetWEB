@@ -23,7 +23,7 @@
 		}catch(PDOException $e){
 		}
 
-/*		try{
+		try{
 
 			$connexion = new PDO("mysql:host=$servername;dbname=site_master", $username, $password);
 			$connexion -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
@@ -43,24 +43,24 @@
 				 Nom_Societe VARCHAR(50),
 				 Site VARCHAR(50)
 			)";
-			$connexion exec($codesql);
+			$connexion -> exec($codesql);
 
 			$codesql="CREATE TABLE Stage(
 				 IDSt INT UNSIGNED AUTOINCREMENT PRIMARY KEY,
 				 Domaine VARCHAR(50)
 			)";
-			$connexion exec($codesql);
+			$connexion -> exec($codesql);
 
 			$codesql="ALTER TABLE Etudiant ADD
 				CONSTRAINT fk_to_IDSt
     			FOREIGN KEY (IDSt)
   				REFERENCES target_table(Stage)";
-			$connexion exec($codesql);
+			$connexion -> exec($codesql);
 
 		}catch(PDOException $e){}
 
+
 	}
-*/
 /*	function connect(){
 		$connexion = new PDO("mysql:host=$servername;dbname=site_master", $username, $password);
 		$connexion -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
