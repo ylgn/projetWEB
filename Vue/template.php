@@ -7,11 +7,11 @@
     <title>Menu</title>
     <link href="Style/myStyleSheet.css" rel="stylesheet">
     <!-- Bootstrap core CSS -->
-    <link href="bootstrap-4.4.1\dist\css\bootstrap.css" rel="stylesheet">
+    <link href="Style/bootstrap-4.4.1\dist\css\bootstrap.css" rel="stylesheet">
   </head>
 <body>
-<nav class="navbar navbar-expand-md myNavbar">
-  <a class="navbar-brand" href="https://dauphine.psl.eu/"><img src="logodauphineblanc"></a>
+<nav class="navbar navbar-expand-md myNavbar fixed-top">
+  <a class="navbar-brand" href="https://dauphine.psl.eu/"><img src="img/logodauphineblanc"></a>
 
   <div class="collapse navbar-collapse">
     <ul class="navbar-nav mr-auto">
@@ -35,5 +35,13 @@
     </form>
   </div>
 </nav>
+
+<footer class="fixed-bottom myFooter">
+  Contacts - Mentions légales - Politique de confidentialité - 
+Plan du site - ©2020 LEGUEN PEYNET PIGANEAU
+</footer>
+
+
+
 </body>
 </html>
