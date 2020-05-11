@@ -6,7 +6,7 @@
 <body>
 	<nav>
 		<?php
-			include "menu.php";
+			include "template.php";
 		?>
 	</nav>
 </body>
