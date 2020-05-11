@@ -10,8 +10,8 @@
 	<?php
 	
 	$serveur = "localhost";
-	$login = "root";
-	$pass = "root";
+	$login = "yannis";
+	$pass = "yannis";
 
 	function init(){
 		echo "entre dans la fonction<br>";
