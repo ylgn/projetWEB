@@ -1,0 +1,54 @@
+.myNavbar {
+	background-color: #0F298F;
+}
+
+.myNavbar .navbar-brand, .myNavbar .navbar-text, .myNavbar .nav-link{
+	color: white;
+	font-size: 20px;
+}
+
+.myRow{
+	background-color: rgba(255, 255, 255, 0.5);
+	margin-top: 150px;
+}
+
+.myHr {
+	border: 1px solid black;
+}
+
+.myMasterImg {
+	margin-top: 50px;
+}
+
+.myFooter {
+  color: white;
+  text-align: center;
+  background-color: #0F298F;
+}
+
+/* Required for full background image */
+
+html,
+body,
+header,
+.view {
+  height: 100%;
+}
+
+@media (max-width: 740px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 1000px;
+  }
+}
+@media (min-width: 800px) and (max-width: 850px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 600px;
+  }
+}
+
