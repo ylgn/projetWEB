@@ -5,10 +5,15 @@
     <meta charset="utf-8">
 
     <title>Menu</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link href='https://unpkg.com/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link href="Style/myStyleSheet.css" rel="stylesheet">
-    <!-- Bootstrap core CSS -->
-    <!-- <link href="Style/bootstrap-4.4.1\dist\css\bootstrap.css" rel="stylesheet"> -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -16,7 +21,7 @@
   </head>
 <body>
 <nav class="navbar navbar-expand-md myNavbar fixed-top">
-  <a class="navbar-brand" href="https://dauphine.psl.eu/"><img src="img/logodauphineblanc"></a>
+  <a class="navbar-brand" href="https://dauphine.psl.eu/"><img src="img/logodauphineblanc.png"></a>
 
   <div class="collapse navbar-collapse">
     <ul class="navbar-nav mr-auto">
