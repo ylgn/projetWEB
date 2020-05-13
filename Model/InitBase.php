@@ -40,7 +40,7 @@
 			$conn -> exec($codesql);
             echo "table stage créée";
            
-          
+           //AJOUT FOREIGN KEY
            
             try {
                 $codesql="ALTER TABLE `ETUDIANT` ADD CONSTRAINT `link_stage` FOREIGN KEY (`IDSt`) REFERENCES `STAGE`(`IDSt`) ON DELETE RESTRICT ON UPDATE RESTRICT; ";
@@ -48,31 +48,36 @@
             } catch (\Throwable $th) {
                 //throw $th;
             }
-
-            //AJOUT FOREIGN KEY
-            
-            
             
             //VIDER LA TABLE ETUDIANT
 
             $codesql="DELETE FROM ETUDIANT";
             $conn -> exec($codesql);
 
+            //VIDER LA TABLE STAGE
+
             $codesql="DELETE FROM STAGE";
             $conn -> exec($codesql);
+
+            //RESET LES AUTO-INCREMENT
 
             $codesql = "ALTER TABLE ETUDIANT AUTO_INCREMENT = 1";
             $conn -> exec($codesql);
             $codesql = "ALTER TABLE STAGE AUTO_INCREMENT = 1";
             $conn -> exec($codesql);
 
+            //INITIALISATION DE LA BASE
 
             $codesql="INSERT INTO `STAGE` (`IDSt`, `domaine`) VALUES (NULL, 'Accompagnateur du changement'), (NULL, 'Administrateur de BDD'), (NULL, 'Administrateur réseau'), (NULL, 'Administrateur sécurité'), (NULL, 'Analyste'), (NULL, 'Auditeur'), (NULL, 'Architecte de données'), (NULL, 'Architecte informatique'), (NULL, 'Architecte logiciel'), (NULL, 'Assembleur d\'ordinateur'), (NULL, 'Business Intelligence'), (NULL, 'Bio-informaticien'), (NULL, 'Data Officer'), (NULL, 'Chargé de Reporting'), (NULL, 'Développeur'), (NULL, 'Développeur full stack'), (NULL, 'Développeur graphique'), (NULL, 'Développeur logiciel'), (NULL, 'Développeur web'), (NULL, 'Infogérance'), (NULL, 'Ingénieur commercial'), (NULL, 'Ingénieur logiciel'), (NULL, 'Ingénieur système'), (NULL, 'Intégrateur'), (NULL, 'Maîtrise d\'œuvre'), (NULL, 'Maîtrise d\'ouvrage'), (NULL, 'Webmaster');";
             $conn -> exec($codesql);
             
-            $codesql="INSERT INTO `ETUDIANT` (`ID`, `nom`, `prenom`, `adresse`, `date_naissance`, `note_maths`, `note_info`, `note_anglais`, `note_moyenne`, `statut`, `photo`, `parcours`, `lettre_motivation`, `CV`, `IDSt`, `Nom_societe`, `Site`) VALUES (NULL, 'PIGANEAU', 'Thaïs', '16 rue Royer-Collard, 75005 Paris', '1998-04-01', '15', '15', '15', '15', 'inscrit', '', 'L1 et L2 MIE à Dauphine, L3 et M1 MIAGE en Apprentissage à Dauphine', 'oui', '', '11', 'Cerqual - Groupe QUALITEL', 'www.qualitel.org') ;";
+            $codesql="INSERT INTO `ETUDIANT` (`ID`, `nom`, `prenom`, `adresse`, `date_naissance`, `note_maths`, `note_info`, `note_anglais`, `note_moyenne`, `statut`, `photo`, `parcours`, `lettre_motivation`, `CV`, `IDSt`, `Nom_societe`, `Site`) VALUES (NULL, 'PIGANEAU', 'Thaïs', 'thais.piganeau@dauphine.eu', '1998-04-01', '15', '15', '15', '15', 'inscrit', '', 'L1 et L2 MIE à Dauphine, L3 et M1 MIAGE en Apprentissage à Dauphine', 'oui', '', '11', 'Cerqual - Groupe QUALITEL', 'www.qualitel.org') ;";
             $conn -> exec($codesql);
-			
+            
+            $codesql="INSERT INTO `ETUDIANT` (`ID`, `nom`, `prenom`, `adresse`, `date_naissance`, `note_maths`, `note_info`, `note_anglais`, `note_moyenne`, `statut`, `photo`, `parcours`, `lettre_motivation`, `CV`, `IDSt`, `Nom_societe`, `Site`) VALUES (NULL, 'LE GUEN', 'Yannis', 'yannis.le-guen@hotmail.fr', '1998-01-20', '15', '15', '15', '15', 'inscrit', '', 'DUT Informatique et L3 MIAGE en apprentissage à Paris Descartes, M1 MIAGE en apprentissage à Paris Dauphine', 'oui', '', '5', 'Swiss Life France', 'swisslife.fr') ;";
+            $conn -> exec($codesql);
+
+          
 
 		}catch(PDOException $e){}
         echo $e;
