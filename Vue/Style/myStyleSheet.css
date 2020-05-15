@@ -36,6 +36,50 @@
   background-color: #0F298F;
 }
 
+.myBtn {
+  background-color: #0F298F;
+  color: white;
+}
+
+.myBtn:hover {
+  color: black;
+}
+
+.card-columns {
+  @include media-breakpoint-only(lg) {
+    column-count: 4;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 5;
+  }
+}
+
+.myThumbnail{
+    max-height: 300px;
+}
+
+.myRetour {
+    font-size: 36px;
+    color: #0F298F;
+    font-weight: bold;
+}
+
+.myRetour:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.myLink {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+}
+.myLink:hover {
+  color: black;
+  text-decoration: none;
+}
+
 /* Required for full background image */
 
 html,
@@ -62,4 +106,3 @@ header,
     height: 600px;
   }
 }
-
