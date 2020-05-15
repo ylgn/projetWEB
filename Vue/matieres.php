@@ -16,9 +16,9 @@
 			<div class="container">
 				<div class="row myRow mb-5">
 					<div class=" col mt-xl-5 mb-5 ml-5">
-						<h1 class="h1-responsive font-weight-bold ">Les enseignements du M1 MIAGE</h1>
+						<h1 class="h1-responsive font-weight-bold mt-3 mr-5">Les enseignements du M1 MIAGE</h1>
 
-						<hr class="myHr">
+						<hr class="myHr mr-5">
 
 						<div class="card mb-1 mt-1 mr-5" >
 							<div class="card-body">
