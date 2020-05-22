@@ -31,7 +31,7 @@
 			$conn -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 			echo "connexion bdd<br>";
 
-            $codesql="CREATE TABLE IF NOT EXISTS `site_master`.`ETUDIANT` ( `ID` INT NOT NULL AUTO_INCREMENT , `nom` VARCHAR(21) NOT NULL , `prenom` VARCHAR(21) NOT NULL , `adresse` VARCHAR(150) NOT NULL , `date_naissance` DATE NOT NULL , `note_maths` DOUBLE NOT NULL , `note_info` DOUBLE NOT NULL , `note_anglais` DOUBLE NOT NULL , `note_moyenne` DOUBLE NOT NULL , `statut` VARCHAR(10) NOT NULL , `parcours` VARCHAR(200) NOT NULL , `lettre_motivation` LONGTEXT NOT NULL , `IDSt` INT NOT NULL , `Nom_societe` VARCHAR(200) NOT NULL , `Site` VARCHAR(200) NOT NULL , PRIMARY KEY (`ID`)) ENGINE = InnoDB; ";
+            $codesql="CREATE TABLE IF NOT EXISTS `site_master`.`ETUDIANT` ( `ID` INT NOT NULL AUTO_INCREMENT , `nom` VARCHAR(21) NOT NULL , `prenom` VARCHAR(21) NOT NULL , `adresse` VARCHAR(150) NOT NULL , `date_naissance` DATE NOT NULL , `note_maths` DOUBLE NOT NULL , `note_info` DOUBLE NOT NULL , `note_anglais` DOUBLE NOT NULL , `note_moyenne` DOUBLE NOT NULL , `statut` VARCHAR(10) NOT NULL , `parcours` VARCHAR(200) NOT NULL , `lettre_motivation` LONGTEXT NOT NULL , `IDSt` INT  , `Nom_societe` VARCHAR(200)  , `Site` VARCHAR(200)  , PRIMARY KEY (`ID`)) ENGINE = InnoDB; ";
 			$conn -> exec($codesql);
             
             echo "table étudiant créée<br>";
