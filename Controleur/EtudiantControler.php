@@ -12,8 +12,6 @@
             }else{
                 displayEtudiantAvecPage($value[1],$value[2],$spe[0][1],$value[15],$value[17]);
             }
-            
-            
         }
     }
 

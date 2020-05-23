@@ -76,7 +76,7 @@
             $conn -> exec($codesql);
             echo "table stage init<br>";
 
-            $codesql= "INSERT INTO `ETUDIANT` (`ID`, `nom`, `prenom`, `adresse`, `date_naissance`, `note_maths`, `note_info`, `note_anglais`, `note_moyenne`, `statut`, `parcours`, `lettre_motivation`, `IDSt`, `Nom_societe`, `Site`, `Photo`, `CV`,`Page`) VALUES (NULL, 'PIGANEAU', 'Thaïs', 'thais.piganeau@dauphine.eu', '1998-04-01', '15', '15', '15', '15', 'inscrit', 'L1 et L2 MIE à Dauphine, L3 et M1 MIAGE en Apprentissage', 'oui', '11', 'Cerqual - Groupe QUALITEL', 'www.qualitel.org', '../Vue/img/profile/thais.jpg', 'cv','../Vue/pageYannis.php')";
+            $codesql= "INSERT INTO `ETUDIANT` (`ID`, `nom`, `prenom`, `adresse`, `date_naissance`, `note_maths`, `note_info`, `note_anglais`, `note_moyenne`, `statut`, `parcours`, `lettre_motivation`, `IDSt`, `Nom_societe`, `Site`, `Photo`, `CV`,`Page`) VALUES (NULL, 'PIGANEAU', 'Thaïs', 'thais.piganeau@dauphine.eu', '1998-04-01', '15', '15', '15', '15', 'inscrit', 'L1 et L2 MIE à Dauphine, L3 et M1 MIAGE en Apprentissage', 'oui', '11', 'Cerqual - Groupe QUALITEL', 'www.qualitel.org', '../Vue/img/profile/thais.jpg', 'cv','../Vue/pageThais.php')";
             $conn -> exec($codesql);
             echo "ajout Thaïs<br>";
            
