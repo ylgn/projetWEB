@@ -1,35 +1,38 @@
 <?php
 
-function createEtudiant($nom,$prenom,$adresse,$date_naissance,$parcours,$note_maths,$note_info,$note_anglais,$note_moyenne,$lettre_motivation){
-	include("ConnexionBase.php");
-	$insert = "INSERT INTO `ETUDIANT` (`ID`, `nom`, `prenom`, `adresse`, `date_naissance`, `note_maths`, `note_info`, `note_anglais`, `note_moyenne`, `statut`, `parcours`, `lettre_motivation`, `IDSt`, `Nom_societe`, `Site`) VALUES (NULL, '$nom', '$prenom', '$adresse', '$date_naissance', '$note_maths', '$note_info', '$note_anglais', '$note_moyenne', 'Candidat', '$parcours', \'oui\', NULL, NULL, NULL)";
-	$connect -> exec($insert);
-}
 
-function searchEtudiant($adresse){
+function getEtudiantById($ID){
 	include("ConnexionBase.php");
-	$search = "SELECT `ID` FROM `ETUDIANT` WHERE `adresse` = '$adresse'";
-	return $connect -> exec($search);
+	$querry = "SELECT * FROM `ETUDIANT` WHERE `ID` = ".$ID ;
+	$prepared_querry = $connect->prepare($querry);
+    $prepared_querry->execute();
+	$resultat = $prepared_querry->fetchAll();
+	return $resultat;
 }
 
 function getAllEtudiantInscrit(){
 	include("ConnexionBase.php");
-	$inscrit = "SELECT * FROM `ETUDIANT` WHERE `statut` ='inscrit'";
-	$connect -> exec($inscrit);
+	$querry = "SELECT * FROM `ETUDIANT` WHERE `statut` ='inscrit'";
+	$prepared_querry = $connect->prepare($querry);
+    $prepared_querry->execute();
+	$resultat = $prepared_querry->fetchAll();
+	return $resultat;
 }
 
-function getEtudiantById($ID){
+function searchEtudiant($adresse){
 	include("ConnexionBase.php");
-	$by_id = "SELECT * FROM `ETUDIANT` WHERE `ID` = = '$ID'";
-	$connect -> exec($inscrit);
+	$querry = "SELECT `ID` FROM `ETUDIANT` WHERE `adresse` = '$adresse'";
+	$prepared_querry = $connect->prepare($querry);
+    $prepared_querry->execute();
+	$resultat = $prepared_querry->fetchAll();
+	return $resultat;
 }
 
-// function addCV($ID,$CV){
-// 	include("ConnexionBase.php");
-// 	$update = "UPDATE `ETUDIANT` SET `CV` = '$CV' WHERE `ETUDIANT`.`ID` = $ID;";
-// 	$connect -> exec($insert);
-// }
+function createEtudiant($nom,$prenom,$adresse,$date_naissance,$parcours,$note_maths,$note_info,$note_anglais,$note_moyenne,$lettre_motivation){
+	include("ConnexionBase.php");
+	$querry = "INSERT INTO `ETUDIANT` (`ID`, `nom`, `prenom`, `adresse`, `date_naissance`, `note_maths`, `note_info`, `note_anglais`, `note_moyenne`, `statut`, `parcours`, `lettre_motivation`, `IDSt`, `Nom_societe`, `Site`) VALUES (NULL, '".$nom."', '".$prenom."', '".$adresse."', '".$date_naissance."', '".$note_maths."', '".$note_info."', '".$note_anglais."', '".$note_moyenne."', 'Candidat', '".$parcours."', '".$lettre_motivation."', NULL, NULL, NULL)";
+	$prepared_querry = $connect->prepare($querry);
+    $prepared_querry->execute();
+}
 
-createEtudiant('PEYNET','Emilie','emilie.peynet@dauphine.eu','1998-11-09','L1 et L2 MIE à Dauphine, L3 et M1 MIAGE en Apprentissage à Dauphine','15','15','15','15','oui');
-echo searchEtudiant('yannis.le-guen@hotmail.fr');
 ?>

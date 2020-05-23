@@ -80,9 +80,17 @@
             $conn -> exec($codesql);
             echo "ajout Thaïs<br>";
            
-            $codesql="INSERT INTO `ETUDIANT` (`ID`, `nom`, `prenom`, `adresse`, `date_naissance`, `note_maths`, `note_info`, `note_anglais`, `note_moyenne`, `statut`,  `parcours`, `lettre_motivation`, `IDSt`, `Nom_societe`, `Site`) VALUES (NULL, 'LE GUEN', 'Yannis', 'yannis.le-guen@hotmail.fr', '1998-01-20', '15', '15', '15', '15', 'inscrit', 'DUT Informatique et L3 MIAGE en apprentissage à Paris Descartes, M1 MIAGE en apprentissage à Paris Dauphine', 'oui', '5', 'Swiss Life France', 'swisslife.fr') ;";
+            $codesql="INSERT INTO `ETUDIANT` (`ID`, `nom`, `prenom`, `adresse`, `date_naissance`, `note_maths`, `note_info`, `note_anglais`, `note_moyenne`, `statut`,  `parcours`, `lettre_motivation`, `IDSt`, `Nom_societe`, `Site`) VALUES (NULL, 'LE GUEN', 'Yannis', 'yannis.le-guen@hotmail.fr', '1998-01-20', '15', '15', '15', '15', 'inscrit', 'DUT Informatique et L3 MIAGE en apprentissage à Paris Descartes, M1 MIAGE en apprentissage à Paris Dauphine', 'oui', '5', 'Swiss Life France', 'www.swisslife.fr') ;";
             $conn -> exec($codesql);
             echo "ajout Yannis<br>";
+
+            $codesql="INSERT INTO `ETUDIANT` (`ID`, `nom`, `prenom`, `adresse`, `date_naissance`, `note_maths`, `note_info`, `note_anglais`, `note_moyenne`, `statut`,  `parcours`, `lettre_motivation`, `IDSt`, `Nom_societe`, `Site`) VALUES (NULL, 'PEYNET', 'Émilie', 'emilie.peynet@dauphine.eu', '1998-11-09', '15', '15', '15', '15', 'inscrit', 'L1 et L2 MIE à Dauphine, L3 et M1 MIAGE en Apprentissage à Dauphine', 'oui', '5', 'Saint-Gobain', 'www.saint-gobain.com') ;";
+            $conn -> exec($codesql);
+            echo "ajout Emilie<br>";
+
+            $codesql="INSERT INTO `ETUDIANT` (`ID`, `nom`, `prenom`, `adresse`, `date_naissance`, `note_maths`, `note_info`, `note_anglais`, `note_moyenne`, `statut`,  `parcours`, `lettre_motivation`, `IDSt`, `Nom_societe`, `Site`) VALUES (NULL, 'LASSALE', 'Jean', 'jj@test.com', '1955-11-09', '15', '15', '15', '15', 'inscrit', 'yes', 'oui', '10', 'Assemblée Nationale', 'www.assemblee-nationale.fr') ;";
+            $conn -> exec($codesql);
+            echo "ajout test<br>";
 
           
 
