@@ -28,11 +28,10 @@ function searchEtudiant($adresse){
 	return $resultat;
 }
 
-function createEtudiant($nom,$prenom,$adresse,$date_naissance,$parcours,$note_maths,$note_info,$note_anglais,$note_moyenne,$lettre_motivation){
+function createEtudiant($nom,$prenom,$adresse,$date_naissance,$note_maths,$note_info,$note_anglais,$note_moyenne,$statut,$parcours,$lettre_motivation){
 	include("ConnexionBase.php");
-	$querry = "INSERT INTO `ETUDIANT` (`ID`, `nom`, `prenom`, `adresse`, `date_naissance`, `note_maths`, `note_info`, `note_anglais`, `note_moyenne`, `statut`, `parcours`, `lettre_motivation`, `IDSt`, `Nom_societe`, `Site`,`Photo`,`CV`,`Page`) VALUES (NULL, '".$nom."', '".$prenom."', '".$adresse."', '".$date_naissance."', '".$note_maths."', '".$note_info."', '".$note_anglais."', '".$note_moyenne."', 'Candidat', '".$parcours."', '".$lettre_motivation."', NULL, NULL, NULL,NULL,NULL,NULL)";
+	$querry = "INSERT INTO `ETUDIANT` (`ID`, `nom`, `prenom`, `adresse`, `date_naissance`, `note_maths`, `note_info`, `note_anglais`, `note_moyenne`, `statut`, `parcours`, `lettre_motivation`, `IDSt`, `Nom_societe`, `Site`,`Photo`,`CV`,`Page`) VALUES (NULL, '".$nom."', '".$prenom."', '".$adresse."', '".$date_naissance."', '".$note_maths."', '".$note_info."', '".$note_anglais."', '".$note_moyenne."', '".$statut."', '".$parcours."', '".$lettre_motivation."', NULL, NULL, NULL,NULL,NULL,NULL)";
 	$prepared_querry = $connect->prepare($querry);
     $prepared_querry->execute();
 }
-
 ?>
