@@ -7,6 +7,7 @@
 	<nav>
 		<?php
 			include "template.php";
+			include "../Controleur/EtudiantControler.php";
 		?>
 	</nav>
 
@@ -21,54 +22,10 @@
 						<hr class="myHr mr-5">
 
 						<div class="card-columns mr-5">
-							<div class="card mr-5 text-center">
-								<img class="card-img-top " src="img/tete1.png" alt="Card image">
-								<div class="card-body">
-									<h4 class="card-title">John Doe</h4>
-									<p class="card-text">Spécialité du stage</p>
-									<button onclick="window.location.href='pagePerso.php'" class="btn myBtn">Page personnelle</button>
-								</div>
-							</div>
-							<div class="card mr-5 text-center">
-								<img class="card-img-top " src="img/tete2.png" alt="Card image">
-								<div class="card-body">
-									<h4 class="card-title">John Doe</h4>
-									<p class="card-text">Spécialité du stage</p>
-									<button onclick="window.location.href='pagePerso.php'" class="btn myBtn">Page personnelle</button>
-								</div>
-							</div>
-							<div class="card mr-5 text-center">
-								<img class="card-img-top " src="img/tete3.png" alt="Card image">
-								<div class="card-body">
-									<h4 class="card-title">John Doe</h4>
-									<p class="card-text">Spécialité du stage</p>
-									<button onclick="window.location.href='pagePerso.php'" class="btn myBtn">Page personnelle</button>
-								</div>
-							</div>
-							<div class="card mr-5 text-center">
-								<img class="card-img-top " src="img/tete4.png" alt="Card image">
-								<div class="card-body">
-									<h4 class="card-title">John Doe</h4>
-									<p class="card-text">Spécialité du stage</p>
-									<button onclick="window.location.href='pagePerso.php'" class="btn myBtn">Page personnelle</button>
-								</div>
-							</div>
-							<div class="card mr-5 text-center">
-								<img class="card-img-top " src="img/tete5.png" alt="Card image">
-								<div class="card-body">
-									<h4 class="card-title">John Doe</h4>
-									<p class="card-text">Spécialité du stage</p>
-									<button onclick="window.location.href='pagePerso.php'" class="btn myBtn">Page personnelle</button>
-								</div>
-							</div>
-							<div class="card mr-5 text-center">
-								<img class="card-img-top " src="img/tete6.png" alt="Card image">
-								<div class="card-body">
-									<h4 class="card-title">John Doe</h4>
-									<p class="card-text">Spécialité du stage</p>
-									<button onclick="window.location.href='pagePerso.php'" class="btn myBtn">Page personnelle</button>
-								</div>
-							</div>
+							
+							<?php
+								consultEtudiantsInscrits();
+							?>
 
 						</div>
 										

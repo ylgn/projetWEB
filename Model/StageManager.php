@@ -9,7 +9,4 @@ function getSpecialiteById($ID){
 	return $resultat;
 }
 
-$test = getSpecialiteById(1);
-echo $test[0][1];
-
 ?>

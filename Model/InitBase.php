@@ -31,7 +31,7 @@
 			$conn -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 			echo "connexion bdd<br>";
 
-            $codesql="CREATE TABLE IF NOT EXISTS `site_master`.`ETUDIANT` ( `ID` INT NOT NULL AUTO_INCREMENT , `nom` VARCHAR(21) NOT NULL , `prenom` VARCHAR(21) NOT NULL , `adresse` VARCHAR(150) NOT NULL , `date_naissance` DATE NOT NULL , `note_maths` DOUBLE NOT NULL , `note_info` DOUBLE NOT NULL , `note_anglais` DOUBLE NOT NULL , `note_moyenne` DOUBLE NOT NULL , `statut` VARCHAR(10) NOT NULL , `parcours` VARCHAR(200) NOT NULL , `lettre_motivation` LONGTEXT NOT NULL , `IDSt` INT  , `Nom_societe` VARCHAR(200)  , `Site` VARCHAR(200)  , PRIMARY KEY (`ID`)) ENGINE = InnoDB; ";
+            $codesql="CREATE TABLE IF NOT EXISTS `site_master`.`ETUDIANT` ( `ID` INT NOT NULL AUTO_INCREMENT , `nom` VARCHAR(21) NOT NULL , `prenom` VARCHAR(21) NOT NULL , `adresse` VARCHAR(150) NOT NULL , `date_naissance` DATE NOT NULL , `note_maths` DOUBLE NOT NULL , `note_info` DOUBLE NOT NULL , `note_anglais` DOUBLE NOT NULL , `note_moyenne` DOUBLE NOT NULL , `statut` VARCHAR(10) NOT NULL , `parcours` VARCHAR(200) NOT NULL , `lettre_motivation` LONGTEXT NOT NULL , `IDSt` INT  , `Nom_societe` VARCHAR(200)  , `Site` VARCHAR(200), `Photo` VARCHAR(200), `CV` VARCHAR(200), `Page` VARCHAR(200), PRIMARY KEY (`ID`)) ENGINE = InnoDB; ";
 			$conn -> exec($codesql);
             
             echo "table étudiant créée<br>";
@@ -76,19 +76,19 @@
             $conn -> exec($codesql);
             echo "table stage init<br>";
 
-            $codesql="INSERT INTO `ETUDIANT` (`ID`, `nom`, `prenom`, `adresse`, `date_naissance`, `note_maths`, `note_info`, `note_anglais`, `note_moyenne`, `statut`, `parcours`, `lettre_motivation`, `IDSt`, `Nom_societe`, `Site`) VALUES (NULL, 'PIGANEAU', 'Thaïs', 'thais.piganeau@dauphine.eu', '1998-04-01', '15', '15', '15', '15', 'inscrit', 'L1 et L2 MIE à Dauphine, L3 et M1 MIAGE en Apprentissage à Dauphine', 'oui', '11', 'Cerqual - Groupe QUALITEL', 'www.qualitel.org') ;";
+            $codesql= "INSERT INTO `ETUDIANT` (`ID`, `nom`, `prenom`, `adresse`, `date_naissance`, `note_maths`, `note_info`, `note_anglais`, `note_moyenne`, `statut`, `parcours`, `lettre_motivation`, `IDSt`, `Nom_societe`, `Site`, `Photo`, `CV`,`Page`) VALUES (NULL, 'PIGANEAU', 'Thaïs', 'thais.piganeau@dauphine.eu', '1998-04-01', '15', '15', '15', '15', 'inscrit', 'L1 et L2 MIE à Dauphine, L3 et M1 MIAGE en Apprentissage', 'oui', '11', 'Cerqual - Groupe QUALITEL', 'www.qualitel.org', '../Vue/img/profile/thais.jpg', 'cv','../Vue/pageYannis.php')";
             $conn -> exec($codesql);
             echo "ajout Thaïs<br>";
            
-            $codesql="INSERT INTO `ETUDIANT` (`ID`, `nom`, `prenom`, `adresse`, `date_naissance`, `note_maths`, `note_info`, `note_anglais`, `note_moyenne`, `statut`,  `parcours`, `lettre_motivation`, `IDSt`, `Nom_societe`, `Site`) VALUES (NULL, 'LE GUEN', 'Yannis', 'yannis.le-guen@hotmail.fr', '1998-01-20', '15', '15', '15', '15', 'inscrit', 'DUT Informatique et L3 MIAGE en apprentissage à Paris Descartes, M1 MIAGE en apprentissage à Paris Dauphine', 'oui', '5', 'Swiss Life France', 'www.swisslife.fr') ;";
+            $codesql="INSERT INTO `ETUDIANT` (`ID`, `nom`, `prenom`, `adresse`, `date_naissance`, `note_maths`, `note_info`, `note_anglais`, `note_moyenne`, `statut`,  `parcours`, `lettre_motivation`, `IDSt`, `Nom_societe`, `Site`,`Photo`, `CV`,`Page`) VALUES (NULL, 'LE GUEN', 'Yannis', 'yannis.le-guen@hotmail.fr', '1998-01-20', '15', '15', '15', '15', 'inscrit', 'DUT Informatique et L3 MIAGE en apprentissage à Paris Descartes, M1 MIAGE en apprentissage à Paris Dauphine', 'oui', '5', 'Swiss Life France', 'www.swisslife.fr','../Vue/img/profile/yannis.jpg','cv','../Vue/pageYannis.php') ;";
             $conn -> exec($codesql);
             echo "ajout Yannis<br>";
 
-            $codesql="INSERT INTO `ETUDIANT` (`ID`, `nom`, `prenom`, `adresse`, `date_naissance`, `note_maths`, `note_info`, `note_anglais`, `note_moyenne`, `statut`,  `parcours`, `lettre_motivation`, `IDSt`, `Nom_societe`, `Site`) VALUES (NULL, 'PEYNET', 'Émilie', 'emilie.peynet@dauphine.eu', '1998-11-09', '15', '15', '15', '15', 'inscrit', 'L1 et L2 MIE à Dauphine, L3 et M1 MIAGE en Apprentissage à Dauphine', 'oui', '5', 'Saint-Gobain', 'www.saint-gobain.com') ;";
+            $codesql="INSERT INTO `ETUDIANT` (`ID`, `nom`, `prenom`, `adresse`, `date_naissance`, `note_maths`, `note_info`, `note_anglais`, `note_moyenne`, `statut`,  `parcours`, `lettre_motivation`, `IDSt`, `Nom_societe`, `Site`,`Photo`, `CV`,`Page`) VALUES (NULL, 'PEYNET', 'Émilie', 'emilie.peynet@dauphine.eu', '1998-11-09', '15', '15', '15', '15', 'inscrit', 'L1 et L2 MIE à Dauphine, L3 et M1 MIAGE en Apprentissage à Dauphine', 'oui', '5', 'Saint-Gobain', 'www.saint-gobain.com','../Vue/img/profile/emilie.jpg','cv','../Vue/pageEmilie.php') ;";
             $conn -> exec($codesql);
             echo "ajout Emilie<br>";
 
-            $codesql="INSERT INTO `ETUDIANT` (`ID`, `nom`, `prenom`, `adresse`, `date_naissance`, `note_maths`, `note_info`, `note_anglais`, `note_moyenne`, `statut`,  `parcours`, `lettre_motivation`, `IDSt`, `Nom_societe`, `Site`) VALUES (NULL, 'LASSALE', 'Jean', 'jj@test.com', '1955-11-09', '15', '15', '15', '15', 'inscrit', 'yes', 'oui', '10', 'Assemblée Nationale', 'www.assemblee-nationale.fr') ;";
+            $codesql="INSERT INTO `ETUDIANT` (`ID`, `nom`, `prenom`, `adresse`, `date_naissance`, `note_maths`, `note_info`, `note_anglais`, `note_moyenne`, `statut`,  `parcours`, `lettre_motivation`, `IDSt`, `Nom_societe`, `Site`,`Photo`, `CV`,`Page`) VALUES (NULL, 'LASSALE', 'Jean', 'jj@test.com', '1955-11-09', '15', '15', '15', '15', 'inscrit', 'yes', 'oui', '10', 'Assemblée Nationale', 'www.assemblee-nationale.fr','../Vue/img/tete4.png','cv',NULL) ;";
             $conn -> exec($codesql);
             echo "ajout test<br>";
 
