@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Nom de l'étudiant</title>
+		<title>Thaïs PIGANEAU</title>
 	</head>
 <body>
 	<nav>
@@ -24,17 +24,19 @@
 							<div class="banner_content">
 								<div class="media">
 									<div class="d-flex">
-										<img src="img/tete1.png" class="img-thumbnail myThumbnail mr-5">
+										<img src="img/profile/thais.jpg" class="img-thumbnail myThumbnail mr-5">
 
 									</div>
 									<div class="media-body">
 										<div class="personal_text">
-											<h1>Nom de l'étudiant</h1>
-											<h4>Spécialité du stage</h4>
-											<p>Parcours de l'étudiant</p>
-											<p><i class="fa fa-birthday-cake"></i> Date de naissance</p>
-											<p><i class="fa fa-at"></i> Adresse mail</p>
-											<p><i class="fa fa-briefcase"></i><a href="#" class="myLink"> Entreprise du stage</a></p>
+											<h1>Thaïs PIGANEAU</h1>
+											<h4>Business Intelligence</h4>
+											<p>Intégration de Dauphine dès la L1.
+											DEMI2E 1 et 2 parcours Informatique, L3 et M1 MIAGE en apprentissage.
+											Prochainement en M2 MIAGE Informatique Décisionnelle en apprentissage. </p>
+											<p><i class="fa fa-birthday-cake"></i> 01/04/1998</p>
+											<p><i class="fa fa-at"></i> thais.piganeau@dauphine.psl.eu</p>
+											<p><i class="fa fa-briefcase"></i><a href="#" class="myLink"> Qalitel</a></p>
 											<p><i class="fa fa-file-pdf-o"></i><a href="CV.pdf" download class="myLink"> Curiculum Vitae</a></p>
 										</div>
 									</div>
