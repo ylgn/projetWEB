@@ -2,6 +2,100 @@
 <html>
 <head>
 	<title>Postuler</title>
+	<script type="text/javascript">
+
+		function verif(){
+			var e = "";
+			firstName = document.getElementById("firstName").value;
+			lastName = document.getElementById("lastName").value;
+			email = document.getElementById("email").value;
+			birthDate = document.getElementById("birthDate").value;
+			parcours = document.getElementById("parcours").options;
+			noteMaths = document.getElementById("noteMaths").value;
+			noteInfo = document.getElementById("noteInfo").value;
+			noteAng = document.getElementById("noteAng").value;
+			moyGen = document.getElementById("moyGen").value;
+			motivationText = document.getElementById("motivationText").value;
+			motivationFile = document.getElementById("motivationFile");
+
+
+			// options = document.getElementById('module').options;
+			// nb_module = 0;
+			// for (var i=0; i < options.length; i++) {
+ 		// 		if (options[i].selected) nb_module++;
+			// }
+			if(firstName.length==0){
+				e += "Le champ PRENOM est vide. "
+			}
+			if(lastName.length==0){
+				e += "Le champ NOM est vide. "
+			}
+			if(email.length==0){
+				e += "Le champ ADRESSE MAIL est vide. "
+			}
+			if(birthDate.length==0){
+				e += "Le champ DATE DE NAISSANCE est vide. "
+			}
+			if(parcours.length==0){
+				e += "Vous devez sélectionner un PARCOURS. "
+			}
+			if(noteMaths.length==0){
+				e += "Vous devez saisir une note de MATHS. "
+			}
+			if(noteInfo.length==0){
+				e += "Vous devez saisir une note d'INFO. "
+			}
+			if(noteAng.length==0){
+				e += "Vous devez saisir une note d'Anglais. "
+			}
+			if(moyGen.length==0){
+				e += "Vous devez saisir une MOYENNE. "
+			}
+			if(motivationText.length==0 and motivationFile.files.length == 0){ 
+				e += "Vous devez saisir ou joindre une lettre de motivation. "
+			}
+
+			var age = today.getFullYear() - date.getFullYear();
+			if(age<20 || age >35){
+				e += "Vous devez avoir entre 20 et 35 ans pour postuler à cette formation. "
+			}
+
+			var letters = /^[A-Za-z]+$/;
+			if(!firstName.match(letters)){
+				e += "Le prénom ne doit contenir que des lettres. "
+			}
+			if(!lastName.match(letters)){
+				e += "Le nom ne doit contenir que des lettres. "
+			}
+			if(firstName.length<3||firstName.length>20){
+				e += "Le prénom doit contenir entre 3 et 20 caractères. "
+			}
+			if(lastName.length<3||lastName.length>20){
+				e += "Le nom doit contenir entre 3 et 20 caractères. "
+			}
+
+
+			if(noteMaths<10){
+				e += "La note de Maths doit être supérieure à 10";
+			}
+			if(noteInfo<15){
+				e += "La note d'Info doit être supérieure à 15";
+			}
+			if(noteAng<12){
+				e += "La note d'Anglais doit être supérieure à 12";
+			}
+			if(moyGen<14){
+				e += "La moyenne doit être supérieure à 14";
+			}
+
+
+			if(e.length>0){
+				alert(e);
+				return false;
+			}
+			return true;
+		}
+	</script>
 </head>
 <body>
 	<nav>
