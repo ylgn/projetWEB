@@ -20,10 +20,12 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </head>
 <body>
-<nav class="navbar navbar-expand-md myNavbar fixed-top">
+<!-- <nav class="navbar navbar-expand-md myNavbar fixed-top">
   <a class="navbar-brand" href="https://dauphine.psl.eu/"><img src="img/logodauphineblanc.png"></a>
-
-  <div class="collapse navbar-collapse">
+  <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link" href="index.php">Accueil</a>
@@ -39,10 +41,30 @@
       </li>
       
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    
+  </div>
+</nav> -->
+
+<nav class="navbar navbar-expand-lg myNavbar fixed-top">
+  <a class="navbar-brand" href="https://dauphine.psl.eu/"><img src="img/logodauphineblanc.png"></a>
+  <button class="navbar-toggler  navbar-dark" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.php">Accueil</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="matieres.php">Matières</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="etudiants.php">Etudiants</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="postuler.php">Postuler</a>
+      </li>
+    </ul>
   </div>
 </nav>
 
