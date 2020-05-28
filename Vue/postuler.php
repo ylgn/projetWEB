@@ -64,11 +64,12 @@
 								<div class="col-4">
 									<label class="control-label" for="parcours">Parcours*</label>
 									<div>
-										<select class="custom-select" id="parcours">
-											<option value="1" selected>Parcours 1</option>
-											<option value="2">Parcours 2</option>
-											<option value="3">Parcours 3</option>
-											<option value="4">Parcours 4</option>
+										<select class="custom-select m" id="parcours">
+											<option disabled selected value> -- choisissez un parcours -- </option>
+											<option value="1">Parcours Informatique Décisionnelle</option>
+											<option value="2">Parcours Informatique pour la Finance</option>
+											<option value="3">Parcours Systèmes d'Information</option>
+											<option value="4">Parcours Intelligence Artificielle</option>
 										</select>
 									</div>
 								</div>
