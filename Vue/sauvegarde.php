@@ -122,7 +122,27 @@
 								<!-- <button class="btn btn-lg myBtn" type="submit">Retour</button>
 								<button class="btn btn-lg myBtn" type="submit">Sauvegarde</button> -->
 								<input type="button" class="btn myBtn btn-lg" value="Retour" onclick="document.location.href='postuler.php'; ">
-								<input type="button" class="btn myBtn btn-lg" value="Sauvegarde" onclick="document.location.href='validation.php'; ">
+								<input type="button" class="btn myBtn btn-lg" value="Sauvegarde" onclick="/*validation();*/">
+							</div>
+
+
+							<!-- ATTENTION Il faut que le bouton sauvegarde appelle l'une de ces pop-ups -->
+
+
+							<!-- LES 3 BOUTONS SUIVANTS SONT A SUPPRIMER -->
+
+
+							<br>
+							<div class="text-center">
+								<button type="button" class="btn myBtn" data-toggle="modal" data-target="#modalNew">
+									Pop-up validation de la candidature
+								</button>
+								<button type="button" class="btn myBtn" data-toggle="modal" data-target="#modalErreur">
+									Pop-up Déjà inscrit
+								</button>
+								<button type="button" class="btn myBtn" data-toggle="modal" data-target="#modalModification">
+									Pop-up Déjà candidat
+								</button>
 							</div>
 						</form> 
 						
@@ -130,5 +150,101 @@
 				</div>
 			</div>
 		</div>
-</body>
+
+
+		<!-- Pop-up validation candidature -->
+		<div class="modal fade" id="modalNew" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-body text-center">
+						<h3>Candidature en cours de validation</h3>
+						<h4>Votre demande d'inscription a bien été prise en compte et sera étudiée dans les plus brefs délais.</h4>
+						<input type="button" class="btn myBtn" data-dismiss="modal" value="Retour à la page d'accueil" onclick="document.location.href='index.php'; ">
+						<button type="button" class="btn myBtn" data-dismiss="modal">Ok</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Pop-up erreur déjà inscrit -->
+		<div class="modal fade" id="modalErreur" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-body text-center">
+						<h3>Erreur</h3>
+						<h4>Votre inscription a déjà été validée, vous ne pouvez plus postuler</h4>
+						<button type="button" class="btn myBtn" data-dismiss="modal">Ok</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Pop-up modification candidature -->
+		<div class="modal fade" id="modalModification" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-body text-center center">
+						<h3>Candidature déjà prise en compte</h3>
+						<h4>Souhaitez-vous la modifier avec cette nouvelle saisie ?</h4>
+						<table class="table">
+							<tr><td></td><td>Anciennes données</td><td>Nouvelles données</td></tr>
+							<tr><td>Nom</td><td>OldName</td><td>NewName</td></tr>
+							<tr><td>Prénom</td><td>OldName</td><td>NewName</td></tr>
+							<tr><td>Parcours</td><td>OldParcours</td><td>NewParcours</td></tr>
+							<tr><td>Mail</td><td>OldMail</td><td>NewMail</td></tr>
+							<tr><td>Date de Naissance</td><td>OldNBirthdate</td><td>NewBirthdate</td></tr>
+							<tr><td>Note en Maths</td><td>10</td><td>11</td></tr>
+							<tr><td>Note en Informatique</td><td>15</td><td>16</td></tr>
+							<tr><td>Note en Anglais</td><td>17</td><td>16</td></tr>
+							<tr><td>Moyenne Générale</td><td>13</td><td>14</td></tr>
+						</table>
+						<!-- <button type="button" class="btn myBtn" data-dismiss="modal">Annuler</button> -->
+						<button type="button" class="btn myBtn" data-dismiss="modal" data-toggle="modal" data-target="#modalModificationCancel">Annuler</button>
+						<input type="button" class="btn myBtn" data-dismiss="modal" data-toggle="modal" data-target="#modalModificationSave" value="Sauvegarder les modifications">
+						<input type="button" class="btn myBtn" data-dismiss="modal" data-toggle="modal" data-target="#modalDelete" value="Supprimer la candidature">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="modalModificationCancel" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-body text-center">
+						<h3>Annulation</h3>
+						<h4>Votre candidature ne sera ni modifiée ni supprimée</h4>
+						<button type="button" class="btn myBtn" data-dismiss="modal">Ok</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="modalModificationSave" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-body text-center">
+						<h3>Sauvegarde</h3>
+						<h4>Votre candidature a bien été mise-à-jour</h4>
+						<button type="button" class="btn myBtn" data-dismiss="modal">Ok</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="modalDelete" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-body text-center">
+						<h3>Suppression</h3>
+						<h4>Votre candidature a bien été supprimée</h4>
+						<h6>Cette suppression est définitive</h6>
+						<button type="button" class="btn myBtn" data-dismiss="modal">Ok</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+
 </html>
