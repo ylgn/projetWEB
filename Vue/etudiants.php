@@ -11,7 +11,7 @@
 		?>
 	</nav>
 
-	<div id="index" class="" style="background-image:url('img/studentsbg.jpg');background-size: auto 100%; background-repeat: no-repeat; background-size: cover; background-position: center center;">
+	<div id="index" class="" style="background-image:url('img/studentsbg.jpg');background-size: auto 100%; background-repeat: no-repeat; background-attachment: fixed; background-size: cover; background-position: center center;">
 
 		<div class="mask rgba-gradient d-flex justify-content-center align-items-center">
 			<div class="container">

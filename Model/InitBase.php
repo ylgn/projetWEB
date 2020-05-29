@@ -88,9 +88,6 @@
             $conn -> exec($codesql);
             echo "ajout Emilie<br>";
 
-            $codesql="INSERT INTO `ETUDIANT` (`ID`, `nom`, `prenom`, `adresse`, `date_naissance`, `note_maths`, `note_info`, `note_anglais`, `note_moyenne`, `statut`,  `parcours`, `lettre_motivation`, `IDSt`, `Nom_societe`, `Site`,`Photo`, `CV`,`Page`) VALUES (NULL, 'LASSALE', 'Jean', 'jj@test.com', '1955-11-09', '15', '15', '15', '15', 'inscrit', 'yes', 'oui', '10', 'Assemblée Nationale', 'www.assemblee-nationale.fr','../Vue/img/profile/profile.jpg','cv',NULL) ;";
-            $conn -> exec($codesql);
-            echo "ajout test<br>";
 
             include("EtudiantManager.php");
             createEtudiant('AHDJOUDJ','Inès','ines.ahdjoudj@dauphine.eu','2000-01-01','15','15','15','15','inscrit','blabla','oui','1','nom','site','../Vue/img/profile/profile.jpg');

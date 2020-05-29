@@ -16,7 +16,7 @@ function displayEtudiantClassic($nom,$prenom,$spe,$picture){
 	$contenu= $contenu.'<div class="card-body">';
 	$contenu= $contenu.'<h4 class="card-title">'.$nom.' '.$prenom.'</h4>';
 	$contenu= $contenu.'<p class="card-text">'.$spe.'</p>';
-    $contenu= $contenu.'</div> </div>';
+    $contenu= $contenu.'<button type=submit class="btn btn-secondary" disabled>Page personnelle</button> </div> </form></div>';
     echo $contenu;
 }
 
