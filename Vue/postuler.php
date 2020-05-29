@@ -114,7 +114,8 @@
 
 						<hr class="myHr">
 
-						<form class="form-horizontal" role="form" method="POST" action="validation.php">
+						<!-- <form class="form-horizontal" role="form" method="POST" action="sauvegarde.php"> -->
+							<form class="form-horizontal" role="form">
 							<h5>Identité</h5>
 							<div class="row">
 								<div class="col-8">
@@ -218,7 +219,8 @@
 									<span class="help-block">(*) Required fields</span>
 								</div>
 							</div>
-							<button class="btn myBtn btn-block mr-5" type="submit">Inscription</button>
+							<!-- <button class="btn myBtn btn-lg btn-block mr-5" type="submit">btn myBtn btn-lg btn-block mr-5</button> -->
+							<input type="button" class="btn myBtn btn-lg btn-block mr-5" value="Inscription" onclick="document.location.href='sauvegarde.php'; ">
 						</form> 
 						
 					</div>
