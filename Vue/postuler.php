@@ -223,6 +223,24 @@
 							<input type="button" class="btn myBtn btn-lg btn-block mr-5" value="Inscription" onclick="document.location.href='sauvegarde.php'; ">
 						</form> 
 						
+						<br>
+							<div class="text-center">
+								<button type="button" class="btn myBtn" data-toggle="modal" data-target="#modalError">
+									Pop-up Erreur de Saisie
+								</button>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="modalError" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-body text-center">
+						<h3>Erreur de Saisie</h3>
+						<h4>Merci de remplir correctement les champs requis.</h4>
+						<button type="button" class="btn myBtn" data-dismiss="modal">Ok</button>
 					</div>
 				</div>
 			</div>
