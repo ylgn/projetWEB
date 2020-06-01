@@ -7,7 +7,6 @@
 	<nav>
 		<?php
 			include "template.php";
-			
 		?>
 	</nav>
 	<?php
@@ -35,7 +34,7 @@
 
 						<hr class="myHr">
 
-						<form class="form-horizontal" role="form" method="POST" action="validation.php">
+						<form class="form-horizontal" role="form" method="POST" action="../Controleur/CandidatControler.php">
 							<h5>Identité</h5>
 							<div class="row">
 								<div class="col-8">
@@ -79,7 +78,13 @@
 								<div class="col-4">
 									<label class="control-label" for="parcours">Parcours</label>
 									<div>
-										<input type="text" id="parcours" name="parcours" class="form-control"   readonly>
+									<select class="custom-select m" id="parcours" name="parcours" disabled>
+											<option disabled selected value> -- choisissez un parcours -- </option>
+											<option value="1">Parcours Informatique Décisionnelle</option>
+											<option value="2">Parcours Informatique pour la Finance</option>
+											<option value="3">Parcours Systèmes d'Information</option>
+											<option value="4">Parcours Intelligence Artificielle</option>
+										</select>
 									</div>
 								</div>
 							</div>
@@ -131,40 +136,25 @@
 							</div>
 							<div class="form-group">
 								<a href="FichierChargé" download class="myLink"> FichierChargé.pdf</a>
+								
 							</div>
 							
 							<div class="text-center">
 								<!-- <button class="btn btn-lg myBtn" type="submit">Retour</button>
 								<button class="btn btn-lg myBtn" type="submit">Sauvegarde</button> -->
 								<input type="button" class="btn myBtn btn-lg" value="Retour" onclick="document.location.href='postuler.php'; ">
-								<input type="button" class="btn myBtn btn-lg" value="Sauvegarde" onclick="/*validation();*/">
+								<input type="submit" class="btn myBtn btn-lg" value="Sauvegarde">
 							</div>
 
 
-							<!-- ATTENTION Il faut que le bouton sauvegarde appelle l'une de ces pop-ups -->
-
-
-							<!-- LES 3 BOUTONS SUIVANTS SONT A SUPPRIMER -->
-
-
-							<br>
-							<div class="text-center">
-								<button type="button" class="btn myBtn" data-toggle="modal" data-target="#modalNew">
-									Pop-up validation de la candidature
-								</button>
-								<button type="button" class="btn myBtn" data-toggle="modal" data-target="#modalErreur">
-									Pop-up Déjà inscrit
-								</button>
-								<button type="button" class="btn myBtn" data-toggle="modal" data-target="#modalModification">
-									Pop-up Déjà candidat
-								</button>
-							</div>
+							
 						</form> 
 						<script type="text/javascript">
 							document.getElementById("firstName").value = "<?php echo $firstName ?>";
 							document.getElementById("lastName").value = "<?php echo $lastName ?>"; 
 							document.getElementById("email").value = "<?php echo $email ?>"; 
 							document.getElementById("birthDate").value = "<?php echo $birthDate ?>"; 
+							document.getElementById("parcours").value  = "<?php echo $parcours ?>"; 
 							document.getElementById("noteMaths").value = "<?php echo $noteMaths ?>"; 
 							document.getElementById("noteInfo").value = "<?php echo $noteInfo ?>";
 							document.getElementById("noteAng").value = "<?php echo $noteAng ?>"; 
@@ -177,20 +167,9 @@
 			</div>
 		</div>
 
+		
 
-		<!-- Pop-up validation candidature -->
-		<div class="modal fade" id="modalNew" tabindex="-1" role="dialog" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-centered" role="document">
-				<div class="modal-content">
-					<div class="modal-body text-center">
-						<h3>Candidature en cours de validation</h3>
-						<h4>Votre demande d'inscription a bien été prise en compte et sera étudiée dans les plus brefs délais.</h4>
-						<input type="button" class="btn myBtn" data-dismiss="modal" value="Retour à la page d'accueil" onclick="document.location.href='index.php'; ">
-						<button type="button" class="btn myBtn" data-dismiss="modal">Ok</button>
-					</div>
-				</div>
-			</div>
-		</div>
+		
 
 		<!-- Pop-up erreur déjà inscrit -->
 		<div class="modal fade" id="modalErreur" tabindex="-1" role="dialog" aria-hidden="true">

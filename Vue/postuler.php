@@ -10,7 +10,7 @@
 			lastName = document.getElementById("lastName").value;
 			email = document.getElementById("email").value;
 			birthDate = document.getElementById("birthDate").value;
-			parcours = document.getElementById("parcours").options;
+			parcours = document.getElementById("parcours").value;
 			noteMaths = document.getElementById("noteMaths").value;
 			noteInfo = document.getElementById("noteInfo").value;
 			noteAng = document.getElementById("noteAng").value;
@@ -63,7 +63,7 @@
 				e += "Le prénom ne doit contenir que des lettres. (Pas d'espaces) \n ";
 			}
 			if(!lastName.match(letters)){
-				e += "Le nom ne doit contenir que des lettres. \n ";
+				e += "Le prénom ne doit contenir que des lettres. (Pas d'espaces) \n ";
 			}
 			if(firstName.length<3||firstName.length>20){
 				e += "Le prénom doit contenir entre 3 et 20 caractères. \n ";
@@ -221,7 +221,7 @@
 								</div>
 							</div>
 							<!-- <button class="btn myBtn btn-lg btn-block mr-5" type="submit">btn myBtn btn-lg btn-block mr-5</button> -->
-							<input type="submit" class="btn myBtn btn-lg btn-block mr-5" value="Inscription" onclick="verif()">
+							<input type="submit" class="btn myBtn btn-lg btn-block mr-5" value="Inscription" onclick="return verif()">
 						</form> 
 						
 						<br>

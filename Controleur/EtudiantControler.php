@@ -2,6 +2,7 @@
     include "../Model/StageManager.php";
     include "../Model/EtudiantManager.php";
     include "../Vue/etudiantView.php";
+    include "../Vue/inscriptionView.php";
 
     function consultEtudiantsInscrits(){
         $listInscrits = getAllEtudiantInscrit();

@@ -21,7 +21,8 @@ function getAllEtudiantInscrit(){
 
 function searchEtudiant($adresse){
 	include("ConnexionBase.php");
-	$querry = "SELECT `ID` FROM `ETUDIANT` WHERE `adresse` = '$adresse'";
+	//$querry = "SELECT * FROM `ETUDIANT` WHERE `adresse` LIKE ".$adresse;
+	$querry = "SELECT * FROM `ETUDIANT` WHERE `adresse` LIKE '".$adresse."'";
 	$prepared_querry = $connect->prepare($querry);
     $prepared_querry->execute();
 	$resultat = $prepared_querry->fetchAll();
