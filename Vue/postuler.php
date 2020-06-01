@@ -17,84 +17,85 @@
 			moyGen = document.getElementById("moyGen").value;
 			motivationText = document.getElementById("motivationText").value;
 			motivationFile = document.getElementById("motivationFile");
-
-
-			// options = document.getElementById('module').options;
-			// nb_module = 0;
-			// for (var i=0; i < options.length; i++) {
- 		// 		if (options[i].selected) nb_module++;
-			// }
+			
+			
+		
 			if(firstName.length==0){
-				e += "Le champ PRENOM est vide. "
+				e += "Le champ PRENOM est vide.  \n";
 			}
 			if(lastName.length==0){
-				e += "Le champ NOM est vide. "
+				e += "Le champ NOM est vide.  \n";
 			}
 			if(email.length==0){
-				e += "Le champ ADRESSE MAIL est vide. "
+				e += "Le champ ADRESSE MAIL est vide.  \n";
 			}
 			if(birthDate.length==0){
-				e += "Le champ DATE DE NAISSANCE est vide. "
+				e += "Le champ DATE DE NAISSANCE est vide. \n ";
 			}
 			if(parcours.length==0){
-				e += "Vous devez sélectionner un PARCOURS. "
+				e += "Vous devez sélectionner un PARCOURS.  \n";
 			}
 			if(noteMaths.length==0){
-				e += "Vous devez saisir une note de MATHS. "
+				e += "Vous devez saisir une note de MATHS. \n ";
 			}
 			if(noteInfo.length==0){
-				e += "Vous devez saisir une note d'INFO. "
+				e += "Vous devez saisir une note d'INFO. \n ";
 			}
 			if(noteAng.length==0){
-				e += "Vous devez saisir une note d'Anglais. "
+				e += "Vous devez saisir une note d'Anglais.  \n";
 			}
 			if(moyGen.length==0){
-				e += "Vous devez saisir une MOYENNE. "
+				e += "Vous devez saisir une MOYENNE.  \n";
 			}
-			if(motivationText.length==0 and motivationFile.files.length == 0){ 
-				e += "Vous devez saisir ou joindre une lettre de motivation. "
+			if((motivationText.length==0) && (motivationFile.files.length == 0)){ 
+				e += "Vous devez saisir ou joindre une lettre de motivation. \n ";
 			}
 
-			var age = today.getFullYear() - date.getFullYear();
+			var today = new Date();
+			var bday = new Date(birthDate)
+			var age = today.getFullYear() - bday.getFullYear();
 			if(age<20 || age >35){
-				e += "Vous devez avoir entre 20 et 35 ans pour postuler à cette formation. "
+				e += "Vous devez avoir entre 20 et 35 ans pour postuler à cette formation. \n ";
 			}
 
 			var letters = /^[A-Za-z]+$/;
 			if(!firstName.match(letters)){
-				e += "Le prénom ne doit contenir que des lettres. "
+				e += "Le prénom ne doit contenir que des lettres. (Pas d'espaces) \n ";
 			}
 			if(!lastName.match(letters)){
-				e += "Le nom ne doit contenir que des lettres. "
+				e += "Le nom ne doit contenir que des lettres. \n ";
 			}
 			if(firstName.length<3||firstName.length>20){
-				e += "Le prénom doit contenir entre 3 et 20 caractères. "
+				e += "Le prénom doit contenir entre 3 et 20 caractères. \n ";
 			}
 			if(lastName.length<3||lastName.length>20){
-				e += "Le nom doit contenir entre 3 et 20 caractères. "
+				e += "Le nom doit contenir entre 3 et 20 caractères. \n ";
 			}
 
 
 			if(noteMaths<10){
-				e += "La note de Maths doit être supérieure à 10";
+				e += "La note de Maths doit être supérieure à 10  \n";
 			}
 			if(noteInfo<15){
-				e += "La note d'Info doit être supérieure à 15";
+				e += "La note d'Info doit être supérieure à 15 \n";
 			}
 			if(noteAng<12){
-				e += "La note d'Anglais doit être supérieure à 12";
+				e += "La note d'Anglais doit être supérieure à 12  \n";
 			}
 			if(moyGen<14){
-				e += "La moyenne doit être supérieure à 14";
+				e += "La moyenne doit être supérieure à 14  \n";
 			}
 
 
 			if(e.length>0){
 				alert(e);
 				return false;
+			}else{
+				return true;
 			}
-			return true;
+			
 		}
+
 	</script>
 </head>
 <body>
@@ -114,8 +115,8 @@
 
 						<hr class="myHr">
 
-						<!-- <form class="form-horizontal" role="form" method="POST" action="sauvegarde.php"> -->
-							<form class="form-horizontal" role="form">
+						
+							<form class="form-horizontal" role="form" method="POST" action="sauvegarde.php">
 							<h5>Identité</h5>
 							<div class="row">
 								<div class="col-8">
@@ -124,7 +125,7 @@
 											<div class="form-group">
 												<label for="firstName" class="control-label">Prénom*</label>
 												<div>
-													<input type="text" id="firstName" placeholder="Prénom" class="form-control" autofocus required minlength="3" maxlength="20">
+													<input type="text" id="firstName" name="firstName" placeholder="Prénom" class="form-control" autofocus required minlength="3" maxlength="20">
 												</div>
 											</div>
 										</div>
@@ -132,7 +133,7 @@
 											<div class="form-group">
 												<label for="lastName" class="control-label">Nom de famille*</label>
 												<div>
-													<input type="text" id="lastName" placeholder="Nom de famille" class="form-control" autofocus required minlength="3" maxlength="20">
+													<input type="text" id="lastName" name="lastName" placeholder="Nom de famille" class="form-control" autofocus required minlength="3" maxlength="20">
 												</div>
 											</div>
 										</div>
@@ -142,7 +143,7 @@
 											<div class="form-group">
 												<label for="email" class="control-label">Adresse mail* </label>
 												<div>
-													<input type="email" id="email" placeholder="Adresse mail" class="form-control" name= "email"  required>
+													<input type="email" id="email" name="email" placeholder="Adresse mail" class="form-control" name= "email"  required>
 												</div>
 											</div>
 										</div>
@@ -150,7 +151,7 @@
 											<div class="form-group">
 												<label for="birthDate" class="control-label">Date de Naissance*</label>
 												<div>
-													<input type="date" id="birthDate" class="form-control"  required>
+													<input type="date" id="birthDate" name="birthDate" class="form-control"  required>
 												</div>
 											</div>
 										</div>
@@ -159,7 +160,7 @@
 								<div class="col-4">
 									<label class="control-label" for="parcours">Parcours*</label>
 									<div>
-										<select class="custom-select m" id="parcours">
+										<select class="custom-select m" id="parcours" name="parcours">
 											<option disabled selected value> -- choisissez un parcours -- </option>
 											<option value="1">Parcours Informatique Décisionnelle</option>
 											<option value="2">Parcours Informatique pour la Finance</option>
@@ -176,7 +177,7 @@
 									<div class="form-group">
 										<label for="noteMaths" class="control-label">Mathématiques* </label>
 										<div>
-											<input type="number" id="noteMaths" placeholder="10" class="form-control" required min="10" max="20">
+											<input type="number" id="noteMaths" name="noteMaths" placeholder="10" class="form-control" required min="10" max="20">
 										</div>
 									</div>
 								</div>
@@ -184,7 +185,7 @@
 									<div class="form-group">
 										<label for="noteInfo" class="control-label">Informatique* </label>
 										<div>
-											<input type="number" id="noteInfo" placeholder="10" class="form-control" required min="15" max="20">
+											<input type="number" id="noteInfo" name="noteInfo" placeholder="10" class="form-control" required min="15" max="20">
 										</div>
 									</div>
 								</div>
@@ -192,7 +193,7 @@
 									<div class="form-group">
 										<label for="noteAng" class="control-label">Anglais* </label>
 										<div>
-											<input type="number" id="noteAng" placeholder="10" class="form-control" required min="12" max="20">
+											<input type="number" id="noteAng" name="noteAng" placeholder="10" class="form-control" required min="12" max="20">
 										</div>
 									</div>
 								</div>
@@ -200,7 +201,7 @@
 									<div class="form-group">
 										<label for="moyGen" class="control-label">Moyenne Générale* </label>
 										<div>
-											<input type="number" id="moyGen" placeholder="10" class="form-control" required min="14" max="20">
+											<input type="number" id="moyGen" name="moyGen" placeholder="10" class="form-control" required min="14" max="20">
 										</div>
 									</div>
 								</div>
@@ -208,7 +209,7 @@
 							<br>
 							<h5>Lettre de motivation*</h5>
 							<div class="form-group">
-								<textarea class="form-control" id="motivationText" rows="3" placeholder="Saisissez ici le texte de votre lettre de motivation..."></textarea>
+								<textarea class="form-control" id="motivationText" name="motivationText" rows="3" placeholder="Saisissez ici le texte de votre lettre de motivation..."></textarea>
 							</div>
 							<div class="form-group">
 								<label for="motivationFile">...ou chargez le fichier correspondant :</label>
@@ -220,7 +221,7 @@
 								</div>
 							</div>
 							<!-- <button class="btn myBtn btn-lg btn-block mr-5" type="submit">btn myBtn btn-lg btn-block mr-5</button> -->
-							<input type="button" class="btn myBtn btn-lg btn-block mr-5" value="Inscription" onclick="document.location.href='sauvegarde.php'; ">
+							<input type="submit" class="btn myBtn btn-lg btn-block mr-5" value="Inscription" onclick="verif()">
 						</form> 
 						
 						<br>
