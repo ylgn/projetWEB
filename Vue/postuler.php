@@ -16,7 +16,8 @@
 			noteAng = document.getElementById("noteAng").value;
 			moyGen = document.getElementById("moyGen").value;
 			motivationText = document.getElementById("motivationText").value;
-
+			//motivationFile = document.getElementById("motivationFile");		
+		
 			if(firstName.length==0){
 				e += "Le champ PRENOM est vide.  \n";
 			}
@@ -44,8 +45,8 @@
 			if(moyGen.length==0){
 				e += "Vous devez saisir une MOYENNE.  \n";
 			}
-			if(motivationText.length==0){ 
-				e += "Vous devez saisir ou joindre une lettre de motivation. \n ";
+			if((motivationText.length==0)){ // && (motivationFile.files.length == 0)){ 
+				e += "Vous devez saisir votre lettre de motivation. \n ";
 			}
 
 			var today = new Date();
@@ -56,11 +57,12 @@
 			}
 
 			var letters = new RegExp("^((?:\\w|[\\-_ ](?![\\-_ ])|[\\u00C0\\u00C1\\u00C2\\u00C3\\u00C4\\u00C5\\u00C6\\u00C7\\u00C8\\u00C9\\u00CA\\u00CB\\u00CC\\u00CD\\u00CE\\u00CF\\u00D0\\u00D1\\u00D2\\u00D3\\u00D4\\u00D5\\u00D6\\u00D8\\u00D9\\u00DA\\u00DB\\u00DC\\u00DD\\u00DF\\u00E0\\u00E1\\u00E2\\u00E3\\u00E4\\u00E5\\u00E6\\u00E7\\u00E8\\u00E9\\u00EA\\u00EB\\u00EC\\u00ED\\u00EE\\u00EF\\u00F0\\u00F1\\u00F2\\u00F3\\u00F4\\u00F5\\u00F6\\u00F9\\u00FA\\u00FB\\u00FC\\u00FD\\u00FF\\u0153])+)$", "i");
+
 			if(!firstName.match(letters)){
-				e += "Le prénom ne doit contenir que des lettres. (Pas d'espaces) \n ";
+				e += "Le prénom ne doit contenir que des lettres.\n ";
 			}
 			if(!lastName.match(letters)){
-				e += "Le prénom ne doit contenir que des lettres. (Pas d'espaces) \n ";
+				e += "Le prénom ne doit contenir que des lettres.\n ";
 			}
 			if(firstName.length<3||firstName.length>20){
 				e += "Le prénom doit contenir entre 3 et 20 caractères. \n ";
@@ -206,9 +208,12 @@
 							<br>
 							<h5>Lettre de motivation*</h5>
 							<div class="form-group">
-								<textarea class="form-control" id="motivationText" name="motivationText" rows="3" placeholder="Saisissez ici le texte de votre lettre de motivation..."></textarea>
+								<textarea class="form-control" id="motivationText" name="motivationText" rows="3" placeholder="Saisissez ici le texte de votre lettre de motivation."></textarea>
 							</div>
-							
+							<!-- <div class="form-group">
+								<label for="motivationFile">...ou chargez le fichier correspondant :</label>
+								<input type="file" class="form-control-file" id="motivationFile">
+							</div> -->
 							<div class="form-group">
 								<div class="col-sm-9 col-sm-offset-3">
 									<span class="help-block">(*) Required fields</span>
@@ -219,11 +224,11 @@
 						</form> 
 						
 						<br>
-							<div class="text-center">
+							<!-- <div class="text-center">
 								<button type="button" class="btn myBtn" data-toggle="modal" data-target="#modalError">
 									Pop-up Erreur de Saisie
 								</button>
-							</div>
+							</div> -->
 					</div>
 				</div>
 			</div>
