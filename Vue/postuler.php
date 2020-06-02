@@ -216,7 +216,7 @@
 							</div> -->
 							<div class="form-group">
 								<div class="col-sm-9 col-sm-offset-3">
-									<span class="help-block">(*) Required fields</span>
+									<span class="help-block">(*) Champs obligatoires</span>
 								</div>
 							</div>
 							<!-- <button class="btn myBtn btn-lg btn-block mr-5" type="submit">btn myBtn btn-lg btn-block mr-5</button> -->
