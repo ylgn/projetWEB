@@ -21,7 +21,6 @@ function getAllEtudiantInscrit(){
 
 function searchEtudiant($adresse){
 	include("ConnexionBase.php");
-	//$querry = "SELECT * FROM `ETUDIANT` WHERE `adresse` LIKE ".$adresse;
 	$querry = "SELECT * FROM `ETUDIANT` WHERE `adresse` LIKE '".$adresse."'";
 	$prepared_querry = $connect->prepare($querry);
     $prepared_querry->execute();
@@ -42,4 +41,22 @@ function createEtudiant($nom,$prenom,$adresse,$date_naissance,$note_maths,$note_
 	$prepared_querry = $connect->prepare($querry);
     $prepared_querry->execute();
 }
+
+
+function deleteEtudiant($adresse){
+	include("ConnexionBase.php");
+	$querry = "DELETE FROM `ETUDIANT` WHERE `adresse` LIKE '".$adresse."'";
+	$prepared_querry = $connect->prepare($querry);
+    $prepared_querry->execute();
+}
+
+function updateEtudiant($nom,$prenom,$adresse,$date_naissance,$note_maths,$note_info,$note_anglais,$note_moyenne,$parcours){
+	include("ConnexionBase.php");
+	$querry = "UPDATE `ETUDIANT` SET `nom`='".$nom."',`prenom`='".$prenom."',`date_naissance`='".$date_naissance."',`note_maths`='".$note_maths."',`note_info`= '".$note_info."',`note_anglais`='".$note_anglais."',`note_moyenne`='".$note_moyenne."',`parcours`='".$parcours."' WHERE `adresse` LIKE '".$adresse."'";
+	$prepared_querry = $connect->prepare($querry);
+    $prepared_querry->execute();
+}
+
+
+
 ?>

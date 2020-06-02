@@ -15,7 +15,6 @@
     $motivationText = $_POST["motivationText"];
     
     
-    
     checkStatut($firstName,$lastName,$email,$birthDate,$parcours, $noteMaths,$noteInfo, $noteAng, $moyGen,$motivationText);
 
     function checkStatut($firstName,$lastName,$email,$birthDate,$parcours, $noteMaths,$noteInfo, $noteAng, $moyGen,$motivationText){
@@ -23,20 +22,24 @@
         $listeEtudiantsBase = searchEtudiant($email);
        
        if (count($listeEtudiantsBase) == 0) {
-            candidatureValidee();
             addCandidat($firstName,$lastName,$email,$birthDate,$parcours, $noteMaths,$noteInfo, $noteAng, $moyGen,$motivationText);
-            
+            candidatureValidee();
+           
        }else {
            $statut =  $listeEtudiantsBase[0][9];
            if ($statut == "inscrit") {
                 erreurDejaInscrit();
            }else{
+            
                 $donneesOld = array();
-                for ($i=1; $i < count($listeEtudiantsBase[0]); $i++) { 
+                for ($i=1; $i < 17; $i++) { 
+                   
                     array_push($donneesOld,$listeEtudiantsBase[0][$i]);
                 }
                 $donneeNew = array($firstName,$lastName,$email,$birthDate,$parcours, $noteMaths,$noteInfo, $noteAng, $moyGen,$motivationText);
-                modifierCandidature($donneesOld, $donneeNew);
+                $dataOld = json_encode($donneesOld);
+                $dataNew = json_encode($donneeNew);
+                displayCandidature($dataOld, $dataNew);
            }
        }
     }
@@ -44,5 +47,6 @@
     function addCandidat($firstName,$lastName,$email,$birthDate,$parcours, $noteMaths,$noteInfo, $noteAng, $moyGen,$motivationText){
         createCandidat($firstName,$lastName,$email,$birthDate,$noteMaths,$noteInfo,$noteAng,$moyGen,'Candidat',$parcours,$motivationText);
     }
+ 
 
 ?>

@@ -1,35 +1,26 @@
 <?php
 
 function candidatureValidee(){
-   // <!-- Pop-up validation candidature -->
-    //rediriger vers page
-    echo "bien inscrit";
+    header('Location: ../Vue/validation.php');
+    exit();
 }
 
 function erreurDejaInscrit(){
-    //<!-- Pop-up erreur déjà inscrit -->
-    // rediriger vers une page
-    echo "déjà inscirt";
-
+    header('Location: ../Vue/erreurDejaInscrit.php');
+    exit();
 }
 
 function modifierCandidature($donneesOld, $donneesNew){
-    //<!-- Pop-up erreur déjà inscrit -->
-    // rediriger vers une page
-    echo "modification de l'inscription ";
-    
-
+    header('Location: ../Vue/modificationCandidature.php');
+    exit();
     foreach ($donneesOld as &$value){
-        echo $value;
-        
+        //echo $value;
     }
-    echo "<br>";
-    foreach ($donneesNew as &$val){
-        echo $val;
-        
-    }
-    echo "<br>";
+}
 
+function displayCandidature($donneesOld, $donneesNew){
+    header('Location: ../Vue/modificationCandidature.php?donneesOld='.$donneesOld.'&donneesNew='.$donneesNew);
+    exit();
 }
 
 ?>

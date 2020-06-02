@@ -114,6 +114,9 @@
             createEtudiant('SOK','Sam David','sam-david.sok@dauphine.eu','2000-01-01','15','15','15','15','inscrit','blabla','oui','1','nom','site','../Vue/img/profile/profile.jpg');
             createEtudiant('SPACI','Nikola','nikola.spaci@dauphine.eu','2000-01-01','15','15','15','15','inscrit','blabla','oui','1','nom','site','../Vue/img/profile/profile.jpg');
             createEtudiant('TANG','Eric','eric.tang@dauphine.eu','2000-01-01','15','15','15','15','inscrit','blabla','oui','1','nom','site','../Vue/img/profile/profile.jpg');
+            
+            createCandidat('TEST','Test','update@test.fr','2000-01-01','15','15','15','15','Candidat','SI','Vive la France');
+            createCandidat('TEST','Test','delete@test.fr','2000-01-01','15','15','15','15','Candidat','SI','Vive la France');
 		}catch(PDOException $e){}
         echo $e;
 	}

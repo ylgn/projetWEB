@@ -161,11 +161,11 @@
 									<label class="control-label" for="parcours">Parcours*</label>
 									<div>
 										<select class="custom-select m" id="parcours" name="parcours">
-											<option disabled selected value> -- choisissez un parcours -- </option>
-											<option value="1">Parcours Informatique Décisionnelle</option>
-											<option value="2">Parcours Informatique pour la Finance</option>
-											<option value="3">Parcours Systèmes d'Information</option>
-											<option value="4">Parcours Intelligence Artificielle</option>
+											<option selected value> -- choisissez un parcours -- </option>
+											<option value="Informatique Décisionnelle">Parcours Informatique Décisionnelle</option>
+											<option value="Informatique pour la Finance">Parcours Informatique pour la Finance</option>
+											<option value="Systèmes d'Information">Parcours Systèmes d'Information</option>
+											<option value="Intelligence Artificielle">Parcours Intelligence Artificielle</option>
 										</select>
 									</div>
 								</div>

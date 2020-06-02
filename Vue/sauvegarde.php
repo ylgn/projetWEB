@@ -78,13 +78,7 @@
 								<div class="col-4">
 									<label class="control-label" for="parcours">Parcours</label>
 									<div>
-										<select class="custom-select m" id="parcours" name="parcours" disabled style="opacity: 1;">
-											<option disabled selected value> -- choisissez un parcours -- </option>
-											<option value="1">Parcours Informatique Décisionnelle</option>
-											<option value="2">Parcours Informatique pour la Finance</option>
-											<option value="3">Parcours Systèmes d'Information</option>
-											<option value="4">Parcours Intelligence Artificielle</option>
-										</select>
+										<input type="text" id="parcours" name="parcours" class="form-control"  readonly>	
 									</div>
 
 								</div>
@@ -139,6 +133,19 @@
 								<a href="FichierChargé" download class="myLink"> FichierChargé.pdf</a>
 								
 							</div>
+
+							<script type="text/javascript">
+								document.getElementById("firstName").value = "<?php echo $firstName ?>";
+								document.getElementById("lastName").value = "<?php echo $lastName ?>"; 
+								document.getElementById("email").value = "<?php echo $email ?>"; 
+								document.getElementById("birthDate").value = "<?php echo $birthDate ?>"; 
+								document.getElementById("parcours").value  = "<?php echo $parcours ?>"; 
+								document.getElementById("noteMaths").value = "<?php echo $noteMaths ?>"; 
+								document.getElementById("noteInfo").value = "<?php echo $noteInfo ?>";
+								document.getElementById("noteAng").value = "<?php echo $noteAng ?>"; 
+								document.getElementById("moyGen").value = "<?php echo $moyGen ?>"; 
+								document.getElementById("motivationText").value = "<?php echo $motivationText ?>"; 
+							</script>
 							
 							<div class="text-center">
 								<!-- <button class="btn btn-lg myBtn" type="submit">Retour</button>
@@ -150,68 +157,15 @@
 
 							
 						</form> 
-						<script type="text/javascript">
-							document.getElementById("firstName").value = "<?php echo $firstName ?>";
-							document.getElementById("lastName").value = "<?php echo $lastName ?>"; 
-							document.getElementById("email").value = "<?php echo $email ?>"; 
-							document.getElementById("birthDate").value = "<?php echo $birthDate ?>"; 
-							document.getElementById("parcours").value  = "<?php echo $parcours ?>"; 
-							document.getElementById("noteMaths").value = "<?php echo $noteMaths ?>"; 
-							document.getElementById("noteInfo").value = "<?php echo $noteInfo ?>";
-							document.getElementById("noteAng").value = "<?php echo $noteAng ?>"; 
-							document.getElementById("moyGen").value = "<?php echo $moyGen ?>"; 
-							document.getElementById("motivationText").value = "<?php echo $motivationText ?>"; 
-						</script>
+						
 						
 					</div>
 				</div>
 			</div>
 		</div>
 
-		
+	
 
-		
-
-		<!-- Pop-up erreur déjà inscrit -->
-		<div class="modal fade" id="modalErreur" tabindex="-1" role="dialog" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-centered" role="document">
-				<div class="modal-content">
-					<div class="modal-body text-center">
-						<h3>Erreur</h3>
-						<h4>Votre inscription a déjà été validée, vous ne pouvez plus postuler</h4>
-						<button type="button" class="btn myBtn" data-dismiss="modal">Ok</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Pop-up modification candidature -->
-		<div class="modal fade" id="modalModification" tabindex="-1" role="dialog" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-				<div class="modal-content">
-					<div class="modal-body text-center center">
-						<h3>Candidature déjà prise en compte</h3>
-						<h4>Souhaitez-vous la modifier avec cette nouvelle saisie ?</h4>
-						<table class="table">
-							<tr><td></td><td>Anciennes données</td><td>Nouvelles données</td></tr>
-							<tr><td>Nom</td><td>OldName</td><td>NewName</td></tr>
-							<tr><td>Prénom</td><td>OldName</td><td>NewName</td></tr>
-							<tr><td>Parcours</td><td>OldParcours</td><td>NewParcours</td></tr>
-							<tr><td>Mail</td><td>OldMail</td><td>NewMail</td></tr>
-							<tr><td>Date de Naissance</td><td>OldNBirthdate</td><td>NewBirthdate</td></tr>
-							<tr><td>Note en Maths</td><td>10</td><td>11</td></tr>
-							<tr><td>Note en Informatique</td><td>15</td><td>16</td></tr>
-							<tr><td>Note en Anglais</td><td>17</td><td>16</td></tr>
-							<tr><td>Moyenne Générale</td><td>13</td><td>14</td></tr>
-						</table>
-						<!-- <button type="button" class="btn myBtn" data-dismiss="modal">Annuler</button> -->
-						<button type="button" class="btn myBtn" data-dismiss="modal" data-toggle="modal" data-target="#modalModificationCancel">Annuler</button>
-						<input type="button" class="btn myBtn" data-dismiss="modal" data-toggle="modal" data-target="#modalModificationSave" value="Sauvegarder les modifications">
-						<input type="button" class="btn myBtn" data-dismiss="modal" data-toggle="modal" data-target="#modalDelete" value="Supprimer la candidature">
-					</div>
-				</div>
-			</div>
-		</div>
 
 		<div class="modal fade" id="modalModificationCancel" tabindex="-1" role="dialog" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered" role="document">
