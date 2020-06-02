@@ -28,16 +28,16 @@
 				e += "Le champ ADRESSE MAIL est vide.  \n";
 			}
 			if(birthDate.length==0){
-				e += "Le champ DATE DE NAISSANCE est vide. \n ";
+				e += "Le champ DATE DE NAISSANCE est vide. \n";
 			}
 			if(parcours.length==0){
 				e += "Vous devez sélectionner un PARCOURS.  \n";
 			}
 			if(noteMaths.length==0){
-				e += "Vous devez saisir une note de MATHS. \n ";
+				e += "Vous devez saisir une note de MATHS. \n";
 			}
 			if(noteInfo.length==0){
-				e += "Vous devez saisir une note d'INFO. \n ";
+				e += "Vous devez saisir une note d'INFO. \n";
 			}
 			if(noteAng.length==0){
 				e += "Vous devez saisir une note d'Anglais.  \n";
@@ -46,7 +46,7 @@
 				e += "Vous devez saisir une MOYENNE.  \n";
 			}
 			if((motivationText.length==0)){ // && (motivationFile.files.length == 0)){ 
-				e += "Vous devez saisir votre lettre de motivation. \n ";
+				e += "Vous devez saisir votre lettre de motivation. \n";
 			}
 
 			var today = new Date();
@@ -59,16 +59,16 @@
 			var letters = new RegExp("^((?:\\w|[\\-_ ](?![\\-_ ])|[\\u00C0\\u00C1\\u00C2\\u00C3\\u00C4\\u00C5\\u00C6\\u00C7\\u00C8\\u00C9\\u00CA\\u00CB\\u00CC\\u00CD\\u00CE\\u00CF\\u00D0\\u00D1\\u00D2\\u00D3\\u00D4\\u00D5\\u00D6\\u00D8\\u00D9\\u00DA\\u00DB\\u00DC\\u00DD\\u00DF\\u00E0\\u00E1\\u00E2\\u00E3\\u00E4\\u00E5\\u00E6\\u00E7\\u00E8\\u00E9\\u00EA\\u00EB\\u00EC\\u00ED\\u00EE\\u00EF\\u00F0\\u00F1\\u00F2\\u00F3\\u00F4\\u00F5\\u00F6\\u00F9\\u00FA\\u00FB\\u00FC\\u00FD\\u00FF\\u0153])+)$", "i");
 
 			if(!firstName.match(letters)){
-				e += "Le prénom ne doit contenir que des lettres.\n ";
+				e += "Le prénom ne doit contenir que des lettres.\n";
 			}
 			if(!lastName.match(letters)){
-				e += "Le prénom ne doit contenir que des lettres.\n ";
+				e += "Le prénom ne doit contenir que des lettres.\n";
 			}
 			if(firstName.length<3||firstName.length>20){
-				e += "Le prénom doit contenir entre 3 et 20 caractères. \n ";
+				e += "Le prénom doit contenir entre 3 et 20 caractères. \n";
 			}
 			if(lastName.length<3||lastName.length>20){
-				e += "Le nom doit contenir entre 3 et 20 caractères. \n ";
+				e += "Le nom doit contenir entre 3 et 20 caractères. \n";
 			}
 
 
