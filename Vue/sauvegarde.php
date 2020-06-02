@@ -129,10 +129,10 @@
 							<div class="form-group">
 								<textarea class="form-control" id="motivationText" name="motivationText" rows="3"  readonly></textarea>
 							</div>
-							<div class="form-group">
+							<!-- <div class="form-group">
 								<a href="FichierChargé" download class="myLink"> FichierChargé.pdf</a>
 								
-							</div>
+							</div> -->
 
 							<script type="text/javascript">
 								document.getElementById("firstName").value = "<?php echo $firstName ?>";
