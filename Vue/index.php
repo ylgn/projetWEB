@@ -48,7 +48,7 @@
         <div class="row myRow">
           <!--Grid column-->
           <div class="col-md-6 text-center text-md-left mt-xl-5 mb-5">
-            <h1 class="h1-responsive font-weight-bold ">Présentation du master</h1>
+            <h1 class="h1-responsive font-weight-bold">Présentation du master</h1>
 
             <hr class="myHr">
             
