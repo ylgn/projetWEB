@@ -118,7 +118,7 @@
             createCandidat('TEST','Test','update@test.fr','2000-01-01','15','15','15','15','Candidat','SI','Vive la France');
             createCandidat('TEST','Test','delete@test.fr','2000-01-01','15','15','15','15','Candidat','SI','Vive la France');
 		}catch(PDOException $e){}
-        echo $e;
+       
 	}
 
 

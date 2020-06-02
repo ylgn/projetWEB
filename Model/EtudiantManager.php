@@ -50,9 +50,9 @@ function deleteEtudiant($adresse){
     $prepared_querry->execute();
 }
 
-function updateEtudiant($nom,$prenom,$adresse,$date_naissance,$note_maths,$note_info,$note_anglais,$note_moyenne,$parcours){
+function updateEtudiant($nom,$prenom,$adresse,$date_naissance,$note_maths,$note_info,$note_anglais,$note_moyenne,$parcours,$lm){
 	include("ConnexionBase.php");
-	$querry = "UPDATE `ETUDIANT` SET `nom`='".$nom."',`prenom`='".$prenom."',`date_naissance`='".$date_naissance."',`note_maths`='".$note_maths."',`note_info`= '".$note_info."',`note_anglais`='".$note_anglais."',`note_moyenne`='".$note_moyenne."',`parcours`='".$parcours."' WHERE `adresse` LIKE '".$adresse."'";
+	$querry = "UPDATE `ETUDIANT` SET `nom`='".$nom."',`prenom`='".$prenom."',`date_naissance`='".$date_naissance."',`note_maths`='".$note_maths."',`note_info`= '".$note_info."',`note_anglais`='".$note_anglais."',`note_moyenne`='".$note_moyenne."',`parcours`='".$parcours."',`lettre_motivation` = '".$lm."' WHERE `adresse` LIKE '".$adresse."'";
 	$prepared_querry = $connect->prepare($querry);
     $prepared_querry->execute();
 }

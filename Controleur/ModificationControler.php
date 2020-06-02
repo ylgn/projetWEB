@@ -12,23 +12,24 @@
     $note_anglais =  $_POST["angNew"];
     $note_moyenne =  $_POST["moyG"];
     $parcours =  $_POST["parcoursNew"];
+    $lm =  $_POST["lm"];
    
     
     if ($val == "Supprimer la candidature") {
        deleteCandidature($emailOld);
        
     }else{
-        updateCandidature($nom,$prenom,$emailNew,$date_naissance,$note_maths,$note_info,$note_anglais,$note_moyenne,$parcours);
+        updateCandidature($nom,$prenom,$emailNew,$date_naissance,$note_maths,$note_info,$note_anglais,$note_moyenne,$parcours,$lm);
     }
     
     function deleteCandidature($add){
         deleteEtudiant($add);
-        header('Location: ../Vue/index.php');
+        header('Location: ../Vue/confirmSuppression.php');
     }
 
-    function updateCandidature($nom,$prenom,$emailNew,$date_naissance,$note_maths,$note_info,$note_anglais,$note_moyenne,$parcours){
-        updateEtudiant($nom,$prenom,$emailNew,$date_naissance,$note_maths,$note_info,$note_anglais,$note_moyenne,$parcours);
-        header('Location: ../Vue/index.php');
+    function updateCandidature($nom,$prenom,$emailNew,$date_naissance,$note_maths,$note_info,$note_anglais,$note_moyenne,$parcours,$lm){
+        updateEtudiant($nom,$prenom,$emailNew,$date_naissance,$note_maths,$note_info,$note_anglais,$note_moyenne,$parcours,$lm);
+        header('Location: ../Vue/confirmModification.php');
     }
 
 ?>

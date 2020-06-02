@@ -13,9 +13,6 @@ function erreurDejaInscrit(){
 function modifierCandidature($donneesOld, $donneesNew){
     header('Location: ../Vue/modificationCandidature.php');
     exit();
-    foreach ($donneesOld as &$value){
-        //echo $value;
-    }
 }
 
 function displayCandidature($donneesOld, $donneesNew){

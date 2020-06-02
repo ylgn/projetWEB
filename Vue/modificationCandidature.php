@@ -7,7 +7,6 @@
 	<nav>
 		<?php
 			include "../Vue/template.php";
-			//include "../Controleur/ModificationControler.php";
 		?>
 	</nav>
 	<?php
@@ -44,6 +43,7 @@
 							<tr><th>Note en Informatique</th><td><?php echo $dataOld[5]; ?></td><td><?php echo $dataNew[6]; ?></td></tr>
 							<tr><th>Note en Anglais</th><td><?php echo $dataOld[6]; ?></td><td><?php echo $dataNew[7]; ?></td></tr>
 							<tr><th>Moyenne Générale</th><td><?php echo $dataOld[7]; ?></td><td><?php echo $dataNew[8]; ?></td></tr>
+							<tr><th>Lettre de motivation</th><td><?php echo $dataOld[10]; ?></td><td><?php echo $dataNew[9]; ?></td></tr>
 						</table>
 
 						<br>
@@ -57,6 +57,7 @@
 						<input id="infoNew" name="infoNew" type="hidden" value="">
 						<input id="angNew" name="angNew" type="hidden" value="">
 						<input id="moyG" name="moyG" type="hidden" value="">
+						<input id="lm" name="lm" type="hidden" value="">
 						
 						<button type="button" class="btn btn-lg myBtn" data-toggle="modal" data-target="#modalModificationCancel">Annuler</button>
 						<input type="submit" name="formOK"class="btn btn-lg myBtn" data-toggle="modal" data-target="#modalModificationSave" value="Sauvegarder les modifications">
@@ -71,7 +72,7 @@
 			</div>
 		</div>
 	
-		<!-- <div class="modal fade" id="modalModificationCancel" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal fade" id="modalModificationCancel" tabindex="-1" role="dialog" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered" role="document">
 				<div class="modal-content">
 					<div class="modal-body text-center">
@@ -82,7 +83,7 @@
 					</div>
 				</div>
 			</div>
-		</div> -->
+		</div>
 
 		<!-- <div class="modal fade" id="modalModificationSave" tabindex="-1" role="dialog" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered" role="document">
@@ -123,6 +124,7 @@
 			document.getElementById("infoNew").value = "<?php echo $dataNew[6] ?>";
 			document.getElementById("angNew").value = "<?php echo $dataNew[7] ?>";
 			document.getElementById("moyG").value = "<?php echo $dataNew[8] ?>";
+			document.getElementById("lm").value = "<?php echo $dataNew[9] ?>";
 		</script>
 
 	</body>
