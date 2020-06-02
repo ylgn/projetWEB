@@ -22,7 +22,7 @@
         $listeEtudiantsBase = searchEtudiant($email);
        
        if (count($listeEtudiantsBase) == 0) {
-            addCandidat($firstName,$lastName,$email,$birthDate,$parcours, $noteMaths,$noteInfo, $noteAng, $moyGen,$motivationText);
+            addCandidat($lastName,$firstName,$email,$birthDate,$parcours, $noteMaths,$noteInfo, $noteAng, $moyGen,$motivationText);
             candidatureValidee();
            
        }else {
@@ -36,7 +36,7 @@
                    
                     array_push($donneesOld,$listeEtudiantsBase[0][$i]);
                 }
-                $donneeNew = array($firstName,$lastName,$email,$birthDate,$parcours, $noteMaths,$noteInfo, $noteAng, $moyGen,$motivationText);
+                $donneeNew = array($lastName,$firstName,$email,$birthDate,$parcours, $noteMaths,$noteInfo, $noteAng, $moyGen,$motivationText);
                 $dataOld = json_encode($donneesOld);
                 $dataNew = json_encode($donneeNew);
                 displayCandidature($dataOld, $dataNew);
@@ -44,8 +44,8 @@
        }
     }
 
-    function addCandidat($firstName,$lastName,$email,$birthDate,$parcours, $noteMaths,$noteInfo, $noteAng, $moyGen,$motivationText){
-        createCandidat($firstName,$lastName,$email,$birthDate,$noteMaths,$noteInfo,$noteAng,$moyGen,'Candidat',$parcours,$motivationText);
+    function addCandidat($lastName,$firstName,$email,$birthDate,$parcours, $noteMaths,$noteInfo, $noteAng, $moyGen,$motivationText){
+        createCandidat($lastName,$firstName,$email,$birthDate,$noteMaths,$noteInfo,$noteAng,$moyGen,'Candidat',$parcours,$motivationText);
     }
  
 
