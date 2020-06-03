@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Validation de la Candidature</title>
+	<title>Modification Confirmée</title>
 </head>
 <body>
 	<nav>
