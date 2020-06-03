@@ -35,9 +35,9 @@
 												DEMI2E 1 et 2 parcours Informatique, L3 et M1 MIAGE en apprentissage.
 												Prochainement en M2 MIAGE Informatique Décisionnelle en apprentissage. </p>
 												<p><i class="fa fa-birthday-cake"></i> 01/04/1998</p>
-												<p><i class="fa fa-at"></i> thais.piganeau@dauphine.psl.eu</p>
+												<p><i class="fa fa-at"></i><a href="mailto:thais.piganeau@dauphine.psl.eu" class="myLink"> thais.piganeau@dauphine.psl.eu</p>
 												<p><i class="fa fa-briefcase"></i><a href="https://www.qualitel.org/" class="myLink"> Qualitel</a></p>
-												<p><i class="fa fa-file-pdf-o"></i><a href="CV.pdf" download class="myLink"> Curiculum Vitae</a></p>
+												<p><i class="fa fa-file-pdf-o"></i><a href="CV\CV_Thaïs.pdf" download class="myLink"> Curiculum Vitae</a></p>
 											</div>
 										</div>
 									</div>

@@ -37,9 +37,9 @@
 												<p>Ouvert à la coopération et à l’engagement, j'ai initié un projet de Junior Entreprise Bac +2 à l’IUT Paris Descartes, une association fondée sur le model des ESN. Ce projet a pour vocation de faire tomber les préjugés négatifs sur l’informatique en favorisant des échanges entres filières pour simplifier la compréhension des métiers liés au digital.</p>
 												<p>Motivé par la performance, certaines de mes valeurs ont été assimilées depuis tout petit grâce au sport et notamment le triathlon. J'y ai appris le respect, l’esprit d’équipe ou encore à rebondir sur mes échecs. </p>
 												<p><i class="fa fa-birthday-cake"></i> 20/01/1998</p>
-												<p><i class="fa fa-at"></i> yannis.le-guen@hotmail.fr</p>
+												<p><i class="fa fa-at"></i><a href="mailto:yannis.le-guen@hotmail.fr" class="myLink"> yannis.le-guen@hotmail.fr</a></p>
 												<p><i class="fa fa-briefcase"></i><a href="https://www.swisslife.fr" class="myLink"> Swiss Life France</a></p>
-												<p><i class="fa fa-file-pdf-o"></i><a href="CV.pdf" download class="myLink"> Curiculum Vitae</a></p>
+												<p><i class="fa fa-file-pdf-o"></i><a href="CV\CV_Yannis.pdf" download class="myLink"> Curiculum Vitae</a></p>
 											</div>
 										</div>
 									</div>

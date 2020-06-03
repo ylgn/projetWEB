@@ -35,9 +35,9 @@
 												DEMI2E 1 et 2 parcours Informatique, L3 et M1 MIAGE en apprentissage.
 												Prochainement en M2 MIAGE Informatique Décisionnelle en apprentissage. </p>
 												<p><i class="fa fa-birthday-cake"></i> 09/11/1998</p>
-												<p><i class="fa fa-at"></i> emilie.peynet@dauphine.psl.eu</p>
+												<p><i class="fa fa-at"></i><a href="mailto:emilie.peynet@dauphine.psl.eu" class="myLink"> emilie.peynet@dauphine.psl.eu</a></p>
 												<p><i class="fa fa-briefcase"></i><a href="https://www.saint-gobain.com/fr" class="myLink"> Saint-Gobain</a></p>
-												<p><i class="fa fa-file-pdf-o"></i><a href="CV.pdf" download class="myLink"> Curiculum Vitae</a></p>
+												<p><i class="fa fa-file-pdf-o"></i><a href="CV\CV_Emilie.pdf" download class="myLink"> Curiculum Vitae</a></p>
 											</div>
 										</div>
 									</div>
