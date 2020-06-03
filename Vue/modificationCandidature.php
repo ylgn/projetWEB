@@ -60,8 +60,8 @@
 						<input id="lm" name="lm" type="hidden" value="">
 						
 						<button type="button" class="btn btn-lg myBtn" data-toggle="modal" data-target="#modalModificationCancel">Annuler</button>
-						<input type="submit" name="formOK"class="btn btn-lg myBtn" data-toggle="modal" data-target="#modalModificationSave" value="Sauvegarder les modifications">
-						<input type="submit" name="formOK" class="btn btn-lg myBtn" data-toggle="modal" data-target="#modalDelete" value="Supprimer la candidature">	
+						<input type="submit" name="formOK"class="btn btn-lg myBtn" value="Sauvegarder les modifications">
+						<input type="submit" name="formOK" class="btn btn-lg myBtn" value="Supprimer la candidature">	
 
 						</form>
 					</div>
@@ -84,33 +84,6 @@
 				</div>
 			</div>
 		</div>
-
-		<!-- <div class="modal fade" id="modalModificationSave" tabindex="-1" role="dialog" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-centered" role="document">
-				<div class="modal-content">
-					<div class="modal-body text-center">
-						<h3>Sauvegarde</h3>
-						<h4>Votre candidature a bien été mise-à-jour</h4>
-				
-						<button type="button" class="btn myBtn" data-dismiss="modal" onclick="document.location.href='index.php'">Retour à la page d'accueil</button>
-					</div>
-				</div>
-			</div>
-		</div> -->
-
-		<!-- <div class="modal fade" id="modalDelete" tabindex="-1" role="dialog" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-centered" role="document">
-				<div class="modal-content">
-					<div class="modal-body text-center">
-						<h3>Suppression</h3>
-						<h4>Votre candidature a bien été supprimée</h4>
-						<h6>Cette suppression est définitive</h6>
-						
-						<button type="button" class="btn myBtn" data-dismiss="modal" onclick="document.location.href='index.php'">Retour à la page d'accueil</button>
-					</div>
-				</div>
-			</div>
-		</div> -->
 		
 
 		<script type="text/javascript">

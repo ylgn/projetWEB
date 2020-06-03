@@ -219,16 +219,10 @@
 									<span class="help-block">(*) Champs obligatoires</span>
 								</div>
 							</div>
-							<!-- <button class="btn myBtn btn-lg btn-block mr-5" type="submit">btn myBtn btn-lg btn-block mr-5</button> -->
+							
 							<input type="submit" class="btn myBtn btn-lg btn-block mr-5" value="Inscription" onclick="return verif()">
 						</form> 
 						
-						<br>
-							<!-- <div class="text-center">
-								<button type="button" class="btn myBtn" data-toggle="modal" data-target="#modalError">
-									Pop-up Erreur de Saisie
-								</button>
-							</div> -->
 					</div>
 				</div>
 			</div>
